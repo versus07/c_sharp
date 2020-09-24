@@ -1,0 +1,6 @@
+C:\Users\Alesja\Documents\Visual Studio 2017\Projects\task_3\task_3\bin\Debug\task_3.exe
+C:\Users\Alesja\Documents\Visual Studio 2017\Projects\task_3\task_3\bin\Debug\task_3.pdb
+C:\Users\Alesja\Documents\Visual Studio 2017\Projects\task_3\task_3\obj\Debug\task_3.csprojAssemblyReference.cache
+C:\Users\Alesja\Documents\Visual Studio 2017\Projects\task_3\task_3\obj\Debug\task_3.csproj.CoreCompileInputs.cache
+C:\Users\Alesja\Documents\Visual Studio 2017\Projects\task_3\task_3\obj\Debug\task_3.exe
+C:\Users\Alesja\Documents\Visual Studio 2017\Projects\task_3\task_3\obj\Debug\task_3.pdb

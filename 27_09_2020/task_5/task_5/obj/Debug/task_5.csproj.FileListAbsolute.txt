@@ -1,0 +1,6 @@
+C:\Users\Alesja\Documents\Visual Studio 2017\Projects\task_5\task_5\obj\Debug\task_5.csprojAssemblyReference.cache
+C:\Users\Alesja\Documents\Visual Studio 2017\Projects\task_5\task_5\obj\Debug\task_5.csproj.CoreCompileInputs.cache
+C:\Users\Alesja\Documents\Visual Studio 2017\Projects\task_5\task_5\bin\Debug\task_5.exe
+C:\Users\Alesja\Documents\Visual Studio 2017\Projects\task_5\task_5\bin\Debug\task_5.pdb
+C:\Users\Alesja\Documents\Visual Studio 2017\Projects\task_5\task_5\obj\Debug\task_5.exe
+C:\Users\Alesja\Documents\Visual Studio 2017\Projects\task_5\task_5\obj\Debug\task_5.pdb

@@ -1,0 +1,5 @@
+C:\Users\Alesja\Documents\Visual Studio 2017\Projects\task_6\task_6\bin\Debug\task_6.exe
+C:\Users\Alesja\Documents\Visual Studio 2017\Projects\task_6\task_6\bin\Debug\task_6.pdb
+C:\Users\Alesja\Documents\Visual Studio 2017\Projects\task_6\task_6\obj\Debug\task_6.csproj.CoreCompileInputs.cache
+C:\Users\Alesja\Documents\Visual Studio 2017\Projects\task_6\task_6\obj\Debug\task_6.exe
+C:\Users\Alesja\Documents\Visual Studio 2017\Projects\task_6\task_6\obj\Debug\task_6.pdb
