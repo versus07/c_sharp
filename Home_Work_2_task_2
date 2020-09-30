@@ -1,0 +1,78 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace L_2_array_task_2
+{
+    /*Преобразовать массив так, чтобы сначала шли все отрицательные элементы, а потом
+     * положительные (0 считать положительным)*/
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            const int size = 20;
+            int[] Masivkas = new int[size];
+            Fill_Masivkas(Masivkas, size);
+            Sort_Masivkas(Masivkas, size);
+            Ready_Sort_Masivkas(Masivkas, size);
+
+            //Random rand = new Random();
+
+        }
+
+        /// <summary>
+        /// Print our array with System.Rand from -20 to 20.
+        /// </summary>
+        /// <param name="Arr"></param>
+        /// <param size="s"></param>
+        static void Fill_Masivkas(int[] Arr, int s)
+        {
+            Random rand = new Random();
+            for (int i = 0; i < s; i++)
+            {
+                Arr[i] = rand.Next(-20, +20);
+                Console.Write(Arr[i] + " ");
+            }
+           Console.WriteLine();
+            Console.WriteLine("=============================================================");
+        }
+
+        /// <summary>
+        /// Sorting array from less ro more.
+        /// </summary>
+        /// <param name="Arr"></param>
+        /// <param name="s"></param>
+        static void Sort_Masivkas(int[] Arr, int s)
+        {
+            int temp = 0;
+            for (int i = 0; i < s - 1; i++)
+            {
+                for (int j = i + 1; j < s; j++)
+                {
+                    if (Arr[i] > Arr[j])
+                    {
+                        temp = Arr[i];
+                        Arr[i] = Arr[j];
+                        Arr[j] = temp;
+                    }
+                }
+            }
+        }
+
+        /// <summary>
+        /// Print our sorting array.
+        /// </summary>
+        /// <param name="Arr"></param>
+        /// <param size="s"></param>
+        static void Ready_Sort_Masivkas(int[] Arr, int s)
+        {
+            for (int i = 0; i < s - 1; i++)
+            {
+                Console.Write(Arr[i] + " ");
+            }
+            Console.WriteLine();
+            Console.WriteLine("=============================================================");
+        }
+    }
+}
