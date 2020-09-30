@@ -1,0 +1,72 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+/*
+ * Сжать массив, удалив из него все нули. Освободившиеся место справа заполнить -1
+ */
+namespace task_2_1
+{
+    class Program
+    {
+        /// <summary>
+        /// Find zero elements in the array and reduce the dimension of the array.
+        /// </summary>
+        /// <param Array of the elements ="Array">Значение</param>      
+        /// <param beginning of the array ="n">Значение</param>      
+        /// <param full size of the array ="s">Значение</param>
+        
+        static void Main(string[] args)
+        {
+
+            int[] Array = new int[10] { 2, 0, 0, 4, 5, -7, 2, 9, 6, 0 };
+            Console.WriteLine("Original array");
+            foreach (int i in Array)
+            {
+                Console.Write(i + " ");
+            }
+
+            int s = 9;
+            int n = 0;
+
+            while (n < s)
+            {
+                if (Array[n] == 0)
+                {
+                    s--;
+
+                    for (int j = n; j < s; j++)
+                    {
+                        Array[j] = Array[j + 1];
+                    }
+                }
+                else
+                {
+                    n++;
+                }
+            }
+            Console.WriteLine();
+
+          
+            /// Adding values to the array.
+            
+           
+            for (int i = s; i < 10; i++)
+            {
+                Array[i] = -1;
+            }
+
+           
+            /// New array.
+          
+            
+            foreach (int i in Array)
+            {
+                Console.Write(i + " ");
+            }
+            Console.WriteLine();
+           // Console.ReadKey();
+        }
+    }
+}
