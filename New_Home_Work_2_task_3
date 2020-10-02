@@ -1,0 +1,52 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace L_2_arr_task_3
+{
+    class Program
+    {
+        /*Write a program, that prompts the user to enter a number and 
+         * counts how many times this number occurs in the array. */
+
+        /// <summary>
+        /// We are looking for how many times the number entered by the user in our array will be 
+        /// repeated!
+        /// </summary>
+        /// <param Its array like with size, you can change it = "arrajushka"></param>
+
+        static void Main(string[] args)
+        {
+
+            int client_digit = 0;
+            int count_digit = 0;
+
+            Console.WriteLine("Enter some digit from -30 to 30 ");
+            client_digit = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("====================================================================");
+
+            int[] arrajushka = new int[30];
+
+            Random rand = new Random();
+
+            for (int i = 0; i < arrajushka.Length; i++)
+            {
+                arrajushka[i] = rand.Next(-30, 30);
+                Console.Write(arrajushka[i] + " ");
+
+                if (arrajushka[i] == client_digit)
+                {
+                    count_digit++;
+                }
+            }
+            Console.WriteLine();
+            Console.WriteLine("====================================================================");
+            Console.WriteLine();
+            Console.WriteLine("Your number occurs ( " + count_digit + " ) once");
+        }
+
+
+    }
+    // Console.ReadKey();
+}
