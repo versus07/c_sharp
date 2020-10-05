@@ -1,0 +1,66 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace L_2_arr_task_4
+{
+    /*In a two-dimensional array of order M by N, swap the specified columns*/
+    class Program
+    {
+        /// <summary>
+        /// Сhanging columns at the user's request
+        /// </summary>
+        /// <param name = masivushka </param>
+        static void Main(string[] args)
+        {
+            int row = 0;
+            int colonki = 0;
+            Console.WriteLine("Inter two digit, for row and colunbs");
+            row = Convert.ToInt32(Console.ReadLine());
+            colonki = Convert.ToInt32(Console.ReadLine());
+            int[ , ] masivushka = new int[row, colonki];
+
+
+            Random random = new Random();
+
+            for(int i = 0; i < row; i++)
+            {
+                for (int j = 0; j < colonki; j++)
+                {
+                    masivushka[i, j] = random.Next() % 10;
+                   
+                    Console.Write(masivushka[i, j] + " ");
+                }
+
+                Console.WriteLine();
+            }
+
+            Console.WriteLine();
+            int colonka_chenge_1 = 0;
+            int colonka_chenge_2 = 0;
+            int temp = 0;
+            Console.WriteLine("Enter rows that you want to change");
+            colonka_chenge_1 = Convert.ToInt32(Console.ReadLine());
+            colonka_chenge_2 = Convert.ToInt32(Console.ReadLine());
+
+            for (int i = 0; i < row; i++)
+            {
+                
+                temp = masivushka[i, colonka_chenge_1];
+                masivushka[i, colonka_chenge_1] = masivushka[i, colonka_chenge_2];
+                masivushka[i, colonka_chenge_2] = temp;
+            }
+
+            for (int i = 0; i < row; i++)
+            {
+                for (int j = 0; j < colonki; j++)
+                {
+                   Console.Write(masivushka[i, j] + " ");
+                }
+
+                Console.WriteLine();
+            }
+        }
+    }
+}
