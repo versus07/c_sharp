@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 
 /*
+* update 08-10-2020
  * Compress the array by removing all zeros from it. Empty space on the right fill -1
  */
 
