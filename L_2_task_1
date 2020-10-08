@@ -1,0 +1,66 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+/*
+ * Compress the array by removing all zeros from it. Empty space on the right fill -1
+ */
+
+namespace task_2_1
+{
+    class Program
+    {
+        /// <summary>
+        /// If zero, then reduce the size of the array, and put the next element in place of zero
+        /// and from the end of the reduced array size to the initial array, fill in -1
+        /// </summary>
+        /// <param name="args">A list of command line arguments.</param> 
+
+        static void Main(string[] args)
+        {
+
+            int[] arr = new int[10] { 2, 0, 0, 4, 5, -7, 2, 9, 6, 0 };
+            Console.WriteLine("Original array");
+
+            foreach (int i in arr)
+            {
+                Console.Write(i + "  ");
+            }
+
+            int end_size = 9;
+            int begining_size = 0;
+
+            for (int i = begining_size; i < end_size; i++)
+            {
+                if (arr[begining_size] == 0)
+                {
+                    end_size--;
+
+                    for (int j = begining_size; j < end_size; j++)
+                    {
+                        arr[j] = arr[j + 1];    //remove next element back instead null
+                    }
+                }
+                else
+                {
+                    begining_size++;
+                }
+            }
+            Console.WriteLine();
+
+                     
+            for (int i = end_size; i < 10; i++)
+            {
+                arr[i] = -1;    //empty place fill with -1
+            }
+                       
+            foreach (int i in arr)
+            {
+                Console.Write(i + "  ");
+            }
+            Console.WriteLine();
+           // Console.ReadKey();
+        }
+    }
+}
