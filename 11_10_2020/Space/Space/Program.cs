@@ -15,24 +15,26 @@ namespace task_space
             Console.WriteLine("1 - go to space");
             Console.WriteLine("2 - start broadcast");
             Console.WriteLine("3 - stop broadcast");
-            Console.WriteLine("1 - go to Land");
+            Console.WriteLine("4 - go to Land");
+            Console.WriteLine("5 - speed up");
 
 
             char enter_some_sign = 'z';
             while (enter_some_sign != 'q')
             {
                 enter_some_sign = Convert.ToChar(Console.ReadLine());
-                Console.WriteLine($"Вы нажали клавишу - {enter_some_sign}");
+                Console.WriteLine($"You push button - {enter_some_sign}");
 
-                int task_for_satellite = 0;
-                task_for_satellite = Convert.ToInt32(Console.ReadLine());
+                int task_for_satellite = Convert.ToInt32(Console.ReadLine());
 
                 switch (task_for_satellite)
                 {
                     case 1:
                         {
-                            satellite.GoToSpace();
-                            satellite.GetInfo();
+                           // Console.WriteLine("If satellite in space push - 1");
+                            //Console.WriteLine("If satellite is Landing push - 0");
+                            satellite.GoToSpace(1);
+                            //satellite.GetInfo();
                             break;
                         }
                     case 2:
@@ -53,6 +55,15 @@ namespace task_space
                             satellite.GetInfo();
                             break;
                         }
+                    case 5:
+                        {
+                            int speed_satellite = 0;
+                            Console.WriteLine("Enter your beginer speed");
+                            int speed_user = Convert.ToInt32(Console.ReadLine());
+                            speed_satellite = satellite.Speed_up(speed_user);
+                            satellite.GetInfo();
+                            break;
+                        }
                 }              
             
             }            
@@ -66,6 +77,7 @@ namespace task_space
         private bool isFly;
         private bool isBroadcast;
         private string message;
+        private int speed_up;
 
         public Satellite()
         {
@@ -85,7 +97,7 @@ namespace task_space
             Console.WriteLine($"Message: {message}");
         }
 
-        public void GoToSpace()
+        public void GoToSpace(int if_fly)
         {
             if(isFly)
             {
@@ -136,8 +148,23 @@ namespace task_space
             }
             else
             {
-                Console.WriteLine("We havw not broadcast yeat");
+                Console.WriteLine("We have not broadcast yeat");
             }
+        }
+
+        public int Speed_up(int speed_from_user)
+        {
+            this.speed_up = speed_from_user;
+
+           int first_speed = 0;
+                for (int i = 0; i < 300; i++)
+                {
+
+                first_speed = first_speed + speed_from_user;
+                Console.WriteLine(first_speed + " ");
+                }
+
+            return first_speed;
         }
     }
 }
